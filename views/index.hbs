@@ -1,0 +1,28 @@
+
+<h1>{{title}}</h1>
+
+<div class="form-group">
+    <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input id="total-amount-cad" class="form-control input-parameter" type="text" pattern="^\d+(?:\.\d{0,2})$" name="total_amount_cad" placeholder="20.88">
+        <span class="input-group-addon">CAD</span>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="input-group">
+        <select id="num-people" class="form-control input-parameter" name="num_people">
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <span class="input-group-addon">People</span>
+    </div>
+</div>
+
+<hr>
+<div>
+    <span>Each person should pay:</span>
+    <span id="split-cost">$0.00 USD</span>
+</div>
