@@ -1,11 +1,10 @@
 $(document).ready(function() {
     var validateCurrency = function ($inputElem) {
-        var regex = /^\d+(?:\.\d{0,2})$/;
         var numStr = $inputElem.val();
-        if (regex.test(numStr))
-            return +numStr;
+        if (validateNumber($inputElem) !== false)
+            return (+numStr).toFixed(2);
         return false;
-    }
+    };
 
     var validateNumber = function ($inputElem) {
         var numStr = $inputElem.val();
@@ -13,15 +12,15 @@ $(document).ready(function() {
         if (isNaN(numNum) || numNum === 0)
             return false;
         return numNum;
-    }
+    };
 
     var splitPossible = function (totalAmount, numPeople) {
         return totalAmount * 100 > numPeople;
-    }
+    };
 
     var displaySplitCost = function (num) {
-        $("#split-cost").text('$' + num.toFixed(2) + " USD");
-    }
+        $("#split-cost").text(num.toFixed(2));
+    };
 
     var calculateSplit = function () {
         var totalAmountCad = validateCurrency($("input[name=total_amount_cad]"));
@@ -36,7 +35,7 @@ $(document).ready(function() {
         var costPerPersonUsd = costPerPersonCad * 0.77;
 
         displaySplitCost(costPerPersonUsd);
-    }
+    };
 
     $(".input-parameter").on("change keyup paste", calculateSplit);
 });
