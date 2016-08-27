@@ -11,7 +11,7 @@
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon">$</span>
-                        <input id="total-amount-cad" class="form-control input-parameter" name="total_amount_cad" type="number" min="0.00" step="0.01" value="0.00" />
+                        <input id="total-amount-cad" class="form-control input-parameter" name="total_amount_cad" type="number" min="0.00" step="0.01" placeholder="0.00" />
                         <span class="input-group-addon">CAD</span>
                     </div>
                 </div>
@@ -34,7 +34,9 @@
             </div>
         </div>
     </form>
+
     <hr>
+
     <div class="row">
         <div class="col-sm-12">
             <div id="output">
@@ -44,4 +46,15 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="exchange-rate">
+                <span>Current exchange rate:</span>
+                <span id="exchange-rate-value">?</span>
+                <span>USD = 1 CAD</span>
+            </div>
+        </div>
+    </div>
+
 </div>
