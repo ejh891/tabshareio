@@ -2,7 +2,7 @@ $(document).ready(function() {
     var exchangeRate = 0.77;
 
     var getExchangeRate = function () {
-        $.get( "http://api.fixer.io/latest?base=CAD&symbols=CAD,USD", function(data) {
+        $.get( "https://api.fixer.io/latest?base=CAD&symbols=CAD,USD", function(data) {
             exchangeRate = data.rates.USD || 0.77;
             displayExchangeRate(exchangeRate);
         });
